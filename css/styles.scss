@@ -1,0 +1,587 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+
+    min-height: 100vh;
+    font-family: 'Roboto', sans-serif;
+}
+
+.conteiner {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    gap: 40px;
+    height: 100vh;
+    width: 100%;
+
+    .header {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        width: 100%;
+        height: 20%;
+        padding: 10px;
+        background: rgb(108, 109, 114);
+        background: radial-gradient(circle, rgba(108, 109, 114, 1) 0%, rgb(207, 207, 207) 100%);
+        box-shadow: 5px 5px 25px rgb(0, 0, 0);
+        border-bottom: 3px solid rgba(6, 175, 234, 0.9);
+
+        .mancha1 {
+            position: absolute;
+            height: 300px;
+            width: 300px;
+            left: 0;
+            top: 6px;
+            background-image: url(../imagenes/mancha2.jpg);
+            background-size: cover;
+            clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+            rotate: 180deg;
+            opacity: 0.7;
+            transition: .3s ease-in-out;
+
+            &:hover {
+                transform: translateX(-3px);
+            }
+        }
+
+        .mancha2 {
+            position: absolute;
+            height: 200px;
+            width: 200px;
+            border: none;
+            left: 150px;
+            top: 60px;
+            background-image: url(../imagenes/mancha2.jpg);
+            background-size: cover;
+            clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+            rotate: (180deg);
+            opacity: 0.9;
+            transition: .3s ease-in-out;
+
+            &:hover {
+                transform: translateX(-3px);
+            }
+        }
+
+        .mancha3 {
+            position: absolute;
+            height: 200px;
+            width: 200px;
+            border: none;
+            right: 150px;
+            top: 60px;
+            background-image: url(../imagenes/mancha2.jpg);
+            background-size: cover;
+            clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+            rotate: (180deg);
+            opacity: 0.9;
+            transition: .3s ease-in-out;
+
+            &:hover {
+                transform: translateX(-3px);
+            }
+        }
+
+        .mancha4 {
+            position: absolute;
+            height: 300px;
+            width: 300px;
+            right: 0;
+            top: 6px;
+            background-image: url(../imagenes/mancha2.jpg);
+            background-size: cover;
+            clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+            rotate: 180deg;
+            opacity: 0.7;
+            transition: .3s ease-in-out;
+
+            &:hover {
+                transform: translateX(-3px);
+            }
+        }
+
+        .titulo_contacto {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 10px;
+
+            .titulo {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+
+                span {
+                    font-size: 48px;
+                    font-weight: 500;
+                    font-family: 'Kalam', cursive;
+                    color: white;
+                    letter-spacing: 1px;
+                }
+
+                span:last-child {
+                    border-top: 1px solid white;
+                    font-family: 'Montserrat', sans-serif;
+                    font-size: 17px;
+                    color: white;
+                    letter-spacing: 10px;
+                    margin-top: -10px;
+                    padding: 3px 50px;
+                }
+            }
+
+            .btncontacto {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 25px;
+
+                .btntitulo {
+                    font-size: 30px;
+                    color: rgba(6, 175, 234, 0.9);
+                    background: none;
+                    padding: 0;
+                    transition: .3s ease-in-out;
+
+                    &:hover {
+                        color: white;
+                        transform: translateY(-3px);
+                    }
+                }
+            }
+        }
+    }
+
+    .foto {
+        margin-top: -10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 10px;
+
+        img {
+            height: 250px;
+            border-radius: 50%;
+            border: 1px solid rgba(6, 175, 234, 0.8);
+            box-shadow: 3px 3px 15px rgb(6, 175, 234);
+            margin-bottom: 10px;
+            rotate: (-5deg);
+        }
+
+        span {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 25px;
+            font-weight: 600;
+            letter-spacing: 4px;
+        }
+
+        span:last-child {
+            font-size: 16px;
+            font-weight: 500;
+            border-top: 2px solid rgba(6, 175, 234, 0.5);
+            padding: 5px 60px;
+            letter-spacing: 5px;
+        }
+    }
+
+    .nosotros {
+        position: relative;
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+        z-index: 100;
+
+        span {
+            font-size: 24px;
+            font-weight: 600;
+            font-family: 'Kalam', cursive;
+        }
+
+        span:last-child {
+            font-family: 'Montserrat', sans-serif;
+            text-align: center;
+            font-size: 20px;
+            font-weight: 300;
+        }
+    }
+
+    .servicios {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 10px;
+
+        span {
+            font-size: 24px;
+            font-weight: 600;
+            font-family: 'Kalam', cursive;
+            margin-bottom: 30px;
+        }
+
+        .categorias {
+            position: relative;
+            margin-top: -20px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            width: 100%;
+
+            div {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                position: relative;
+                height: 325px;
+                width: 425px;
+                border: 1px solid rgba(22, 22, 22, 0.2);
+                box-shadow: 3px 3px 10px black;
+                border-radius: 15px;
+                padding: 10px;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: rgb(192, 239, 255);
+                    background: linear-gradient(90deg, rgba(192, 239, 255, 1) 0%, rgba(116, 219, 255, 1) 24%, rgba(6, 175, 234, 1) 100%);
+                    clip-path: ellipse(240px 250px at 0% 100%);
+                }
+
+                img {
+                    height: 220px;
+                    border-radius: 10px;
+                    transition: .3s ease-in-out;
+                    border: 1px solid rgba(22, 22, 22, 0.2);
+                    z-index: 1000;
+
+                    &:hover {
+                        transform: scale(0.95);
+                    }
+                }
+
+                span {
+                    margin-top: 15px;
+                    color: black;
+                    font-family: sans-serif;
+                    margin-bottom: 0;
+                    font-size: 18px;
+                    padding-top: 5px;
+                    padding-left: 20px;
+                    padding-right: 20px;
+                    font-family: 'Montserrat', sans-serif;
+                    text-align: center;
+                    font-weight: 300;
+                    z-index: 1000;
+                }
+
+                &:hover {
+                    box-shadow: 3px 3px 15px rgba(6, 175, 234, 0.6);
+                    border: none;
+                }
+            }
+        }
+    }
+
+    .contacto {
+        position: fixed;
+        right: 10px;
+        top: 55vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        span {
+            font-size: 24px;
+            font-weight: 600;
+            font-family: 'Kalam', cursive;
+            transform: rotate(90deg);
+        }
+
+        div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 40px;
+            background: rgb(108, 109, 114);
+            box-shadow: 2px 2px 10px rgb(6, 175, 234);
+            border-radius: 25px;
+            padding: 20px 15px;
+            margin-right: 0;
+
+            .btn {
+                font-size: 35px;
+                color: rgba(6, 175, 234, 1);
+                border-radius: 50%;
+                transition: .3s ease-in-out;
+
+                &:hover {
+                    color: white;
+                    transform: translateY(-3px);
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:960px) {
+
+    .conteiner {
+
+        .header {
+            height: 100px;
+            box-shadow: 3px 3px 15px rgb(0, 0, 0);
+            border-bottom: 2px solid rgba(6, 175, 234, 0.9);
+
+            .mancha1 {
+                position: absolute;
+                height: 150px;
+                width: 150px;
+                top: 25px;
+            }
+
+            .mancha2 {
+                height: 100px;
+                width: 100px;
+                left: 85px;
+                top: 50px;
+            }
+
+            .mancha3 {
+
+                height: 100px;
+                width: 100px;
+                right: 85px;
+                top: 50px;
+
+            }
+
+            .mancha4 {
+                height: 150px;
+                width: 150px;
+                right: 0;
+                top: 25px;
+            }
+
+            .titulo_contacto {
+
+                .titulo {
+
+                    span {
+                        font-size: 30px;
+                    }
+
+                    span:last-child {
+
+                        font-size: 12px;
+                    }
+                }
+
+                .btncontacto {
+
+                    .btntitulo {
+                        font-size: 25px;
+                    }
+                }
+            }
+        }
+
+        .foto {
+
+            img {
+                height: 200px;
+            }
+
+            span {
+                font-size: 20px;
+            }
+
+            span:last-child {
+                font-size: 12px;
+
+            }
+        }
+
+        .nosotros {
+
+            width: 75%;
+
+            span {
+                font-size: 24px;
+            }
+        }
+
+        .contacto {
+            top: 20px;
+
+            div {
+                padding: 15px 15px;
+
+                .btn {
+                    font-size: 28px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:480px) {
+
+    .conteiner {
+
+        .header {
+            height: 150px;
+            border-bottom: 2px solid rgba(6, 175, 234, 0.9);
+
+            .mancha1 {
+                visibility: hidden;
+            }
+
+            .mancha2 {
+
+                height: 120px;
+                width: 120px;
+                left: 0px;
+                top: 200px;
+                opacity: 0.8;
+
+            }
+
+            .mancha3 {
+
+                height: 120px;
+                width: 120px;
+                right: 0px;
+                top: 200px;
+                opacity: 0.8;
+            }
+
+            .mancha4 {
+                visibility: hidden;
+            }
+
+            .titulo_contacto {
+
+                .titulo {
+
+                    span {
+                        font-size: 30px;
+                    }
+
+                    span:last-child {
+
+                        font-size: 12px;
+                        margin-top: -5px;
+                        padding: 5px 50px;
+                    }
+                }
+
+                .btncontacto {
+
+                    .btntitulo {
+                        font-size: 28px;
+                    }
+                }
+            }
+        }
+
+        .foto {
+
+            img {
+                height: 200px;
+            }
+
+            span {
+                font-size: 18px;
+            }
+
+            span:last-child {
+                font-size: 11px;
+                border-top: 2px solid rgba(6, 175, 234, 0.5);
+                padding: 5px 10px;
+
+            }
+        }
+
+        .nosotros {
+            width: 90%;
+
+            span {
+                font-size: 24px;
+                font-weight: 600;
+                font-family: 'Kalam', cursive;
+            }
+
+            span:last-child {
+                font-family: 'Montserrat', sans-serif;
+                text-align: center;
+                font-size: 20px;
+                font-weight: 300;
+            }
+        }
+
+        .servicios {
+
+            .categorias {
+
+                div {
+
+                    height: 305px;
+                    width: 350px;
+                    box-shadow: 2px 2px 10px black;
+
+                    img {
+                        height: 190px;
+                        border-radius: 10px;
+                        transition: .3s ease-in-out;
+                        border: 1px solid rgba(22, 22, 22, 0.2);
+                        z-index: 1000;
+
+                        &:hover {
+                            transform: scale(0.95);
+                        }
+                    }
+                }
+            }
+        }
+
+        .contacto {
+            top: 20vh;
+            right: 3px;
+
+            div {
+
+                transition: 3s;
+
+                .btn {
+                    font-size: 28px;
+                }
+            }
+        }
+    }
+}
