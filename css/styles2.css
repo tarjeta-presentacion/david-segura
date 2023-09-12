@@ -1,0 +1,541 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Roboto", sans-serif;
+  background-color: rgba(109, 110, 115, 0.712);
+}
+
+@keyframes animateBorderOne {
+  from {
+    box-shadow: 5px 5px 40px rgb(255, 255, 255);
+  }
+  to {
+    box-shadow: 7px 7px 25px rgb(221, 221, 221);
+  }
+}
+.conteiner {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  gap: 40px;
+  height: 100vh;
+  width: 100%;
+}
+.conteiner .header {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  width: 100%;
+  height: 25%;
+  padding: 10px;
+  background: rgb(111, 112, 117);
+  box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.726);
+  border-bottom: 3px solid rgba(255, 255, 255, 0.9);
+}
+.conteiner .header .mancha1 {
+  position: absolute;
+  height: 300px;
+  width: 300px;
+  left: 0;
+  top: 40px;
+  background-image: url(../imagenes/mancha2.jpg);
+  background-size: cover;
+  -webkit-clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+          clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+  rotate: 180deg;
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+}
+.conteiner .header .mancha1:hover {
+  transform: translateX(-3px);
+}
+.conteiner .header .mancha2 {
+  position: absolute;
+  height: 200px;
+  width: 200px;
+  border: none;
+  left: 150px;
+  top: 90px;
+  background-image: url(../imagenes/mancha2.jpg);
+  background-size: cover;
+  -webkit-clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+          clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+  rotate: 180deg;
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+}
+.conteiner .header .mancha2:hover {
+  transform: translateX(-3px);
+}
+.conteiner .header .mancha3 {
+  position: absolute;
+  height: 200px;
+  width: 200px;
+  border: none;
+  right: 150px;
+  top: 90px;
+  background-image: url(../imagenes/mancha2.jpg);
+  background-size: cover;
+  -webkit-clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+          clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+  rotate: 180deg;
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+}
+.conteiner .header .mancha3:hover {
+  transform: translateX(-3px);
+}
+.conteiner .header .mancha4 {
+  position: absolute;
+  height: 300px;
+  width: 300px;
+  right: 0;
+  top: 40px;
+  background-image: url(../imagenes/mancha2.jpg);
+  background-size: cover;
+  -webkit-clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+          clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+  rotate: 180deg;
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+}
+.conteiner .header .mancha4:hover {
+  transform: translateX(-3px);
+}
+.conteiner .header .titulo_contacto {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+.conteiner .header .titulo_contacto .titulo .logo {
+  height: 120px;
+}
+.conteiner .header .titulo_contacto .btncontacto {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+}
+.conteiner .header .titulo_contacto .btncontacto .btntitulo {
+  font-size: 30px;
+  color: white;
+  background: none;
+  padding: 0;
+  transition: 0.3s ease-in-out;
+}
+.conteiner .header .titulo_contacto .btncontacto .btntitulo:hover {
+  color: rgb(255, 255, 255);
+  transform: translateY(-3px);
+}
+.conteiner .foto {
+  margin-top: -10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+.conteiner .foto img {
+  height: 350px;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  box-shadow: 5px 5px 25px rgb(255, 255, 255);
+  margin-bottom: 10px;
+}
+.conteiner .foto span {
+  font-family: "Montserrat", sans-serif;
+  font-size: 25px;
+  font-weight: 600;
+  letter-spacing: 4px;
+  color: white;
+}
+.conteiner .foto span:last-child {
+  font-size: 16px;
+  font-weight: 600;
+  border-top: 2px solid rgb(109, 110, 115);
+  padding: 5px 60px;
+  letter-spacing: 5px;
+}
+.conteiner .nosotros {
+  position: relative;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+  z-index: 100;
+}
+.conteiner .nosotros span {
+  font-size: 30px;
+  font-weight: 600;
+  font-family: "Kalam", cursive;
+  color: white;
+}
+.conteiner .nosotros .somos {
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+.conteiner .nosotros .catser {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.conteiner .nosotros .catser .texto-cat {
+  border-radius: 10px;
+  height: 60px;
+  width: 45%;
+  background: rgb(108, 109, 114);
+  background: linear-gradient(270deg, rgb(108, 109, 114) 0%, rgb(175, 175, 175) 73%);
+  box-shadow: 3px 3px 10px rgb(175, 175, 175);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s ease-in-out;
+}
+.conteiner .nosotros .catser .texto-cat span {
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 500;
+  color: white;
+}
+.conteiner .nosotros .catser .texto-cat:hover {
+  background: rgb(108, 109, 114);
+  background: linear-gradient(270deg, rgba(108, 109, 114, 0.75) 0%, rgba(175, 175, 175, 0.75) 73%);
+  transform: translateY(-2px);
+}
+.conteiner .nosotros .anticipos {
+  border-radius: 15px;
+  background-color: rgb(109, 110, 115);
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid rgba(255, 255, 255, 0.651);
+  width: 100%;
+  padding: 20px;
+  gap: 5px;
+  animation: 1s animateBorderOne ease infinite;
+}
+.conteiner .nosotros .anticipos span {
+  font-family: "Kalam", cursive;
+  font-size: 22px;
+  font-weight: 300;
+  color: white;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.74);
+}
+.conteiner .nosotros .anticipos span:last-child {
+  border: none;
+  font-family: "Montserrat", sans-serif;
+  font-size: 25px;
+  font-weight: 600;
+  color: rgb(255, 255, 255);
+}
+.conteiner .servicios {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 10px;
+}
+.conteiner .servicios span {
+  color: white;
+  font-size: 30px;
+  font-weight: 600;
+  font-family: "Kalam", cursive;
+  margin-bottom: 30px;
+}
+.conteiner .servicios .categorias {
+  position: relative;
+  margin-top: -20px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  width: 100%;
+}
+.conteiner .servicios .categorias div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  height: 325px;
+  width: 425px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 3px 3px 10px rgb(255, 255, 255);
+  border-radius: 15px;
+  padding: 10px;
+  overflow: hidden;
+}
+.conteiner .servicios .categorias div::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(109, 110, 115);
+  -webkit-clip-path: ellipse(240px 250px at 0% 100%);
+          clip-path: ellipse(240px 250px at 0% 100%);
+  overflow: hidden;
+}
+.conteiner .servicios .categorias div img {
+  height: 220px;
+  border-radius: 10px;
+  transition: 0.3s ease-in-out;
+  border: 1px solid rgba(22, 22, 22, 0.2);
+  z-index: 1000;
+}
+.conteiner .servicios .categorias div img:hover {
+  transform: scale(0.95);
+}
+.conteiner .servicios .categorias div span {
+  margin-top: 15px;
+  color: rgb(255, 255, 255);
+  font-family: sans-serif;
+  margin-bottom: 0;
+  font-size: 18px;
+  padding-top: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  font-weight: 400;
+  z-index: 1000;
+}
+.conteiner .servicios .categorias div:hover {
+  box-shadow: 3px 3px 25px rgba(255, 255, 255, 0.6);
+  border: none;
+}
+.conteiner .contacto {
+  position: fixed;
+  right: 10px;
+  top: 55vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.conteiner .contacto span {
+  font-size: 24px;
+  font-weight: 600;
+  font-family: "Kalam", cursive;
+  transform: rotate(90deg);
+}
+.conteiner .contacto div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 40px;
+  background: rgb(108, 109, 114);
+  box-shadow: 2px 2px 15px rgb(255, 255, 255);
+  border-radius: 25px;
+  padding: 20px 15px;
+  margin-right: 0;
+}
+.conteiner .contacto div .btn {
+  font-size: 35px;
+  color: rgb(255, 255, 255);
+  border-radius: 50%;
+  transition: 0.3s ease-in-out;
+}
+.conteiner .contacto div .btn:hover {
+  color: white;
+  transform: translateY(-3px);
+}
+
+@media screen and (max-width: 960px) {
+  .conteiner .header {
+    height: 150px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.9);
+  }
+  .conteiner .header .mancha1 {
+    height: 100px;
+    width: 100px;
+    left: 100px;
+    top: 100px;
+    opacity: 0;
+  }
+  .conteiner .header .mancha2 {
+    height: 150px;
+    width: 150px;
+    left: 0;
+    top: 75px;
+    opacity: 0;
+  }
+  .conteiner .header .mancha3 {
+    height: 100px;
+    width: 100px;
+    right: 100px;
+    top: 100px;
+    opacity: 0;
+  }
+  .conteiner .header .mancha4 {
+    height: 150px;
+    width: 150px;
+    right: 0;
+    top: 75px;
+    opacity: 0;
+  }
+  .conteiner .header .titulo_contacto .titulo .logo {
+    height: 90px;
+  }
+  .conteiner .foto img {
+    height: 250px;
+  }
+  .conteiner .foto span {
+    font-size: 20px;
+  }
+  .conteiner .foto span:last-child {
+    font-size: 12px;
+  }
+  .conteiner .nosotros .catser {
+    width: 85%;
+  }
+  .conteiner .nosotros .catser .texto-cat span {
+    font-size: 17px;
+  }
+  .conteiner .nosotros .anticipos span {
+    font-size: 18px;
+    font-weight: 200;
+  }
+  .conteiner .nosotros .anticipos span:last-child {
+    font-size: 25px;
+    font-weight: 500;
+  }
+  .conteiner .contacto {
+    top: 10px;
+  }
+  .conteiner .contacto div {
+    padding: 15px 15px;
+  }
+  .conteiner .contacto div .btn {
+    font-size: 30px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .conteiner .header {
+    box-shadow: 5px 5px 25px rgb(0, 0, 0);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.9);
+  }
+  .conteiner .header .mancha1 {
+    position: absolute;
+    height: 150px;
+    width: 150px;
+    left: 0;
+    top: 250px;
+    opacity: 0;
+  }
+  .conteiner .header .mancha2 {
+    visibility: hidden;
+  }
+  .conteiner .header .mancha3 {
+    visibility: hidden;
+  }
+  .conteiner .header .mancha4 {
+    position: absolute;
+    height: 150px;
+    width: 150px;
+    right: 0;
+    top: 250px;
+    opacity: 0;
+  }
+  .conteiner .header .titulo_contacto .titulo .logo {
+    height: 90px;
+  }
+  .conteiner .foto {
+    z-index: 100;
+  }
+  .conteiner .foto img {
+    height: 300px;
+  }
+  .conteiner .foto span {
+    font-size: 17px;
+  }
+  .conteiner .foto span:last-child {
+    font-size: 11px;
+    border-top: 1px solid rgb(109, 110, 115);
+    padding: 5px 10px;
+  }
+  .conteiner .nosotros {
+    width: 65%;
+  }
+  .conteiner .nosotros .catser {
+    width: 75%;
+    flex-wrap: nowrap;
+    flex-direction: column;
+  }
+  .conteiner .nosotros .catser .texto-cat {
+    width: 130%;
+  }
+  .conteiner .nosotros .catser .texto-cat span {
+    font-size: 16px;
+  }
+  .conteiner .nosotros .anticipos {
+    width: 150%;
+    height: 180px;
+  }
+  .conteiner .nosotros .anticipos span {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 200;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    margin-bottom: 3px;
+  }
+  .conteiner .nosotros .anticipos span:last-child {
+    border: none;
+    font-family: "Montserrat", sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: rgb(255, 255, 255);
+  }
+  .conteiner .servicios span {
+    font-size: 24px;
+  }
+  .conteiner .servicios .categorias div {
+    height: 310px;
+    width: 250px;
+  }
+  .conteiner .servicios .categorias div::before {
+    content: "";
+    -webkit-clip-path: ellipse(180px 190px at 0% 100%);
+            clip-path: ellipse(180px 190px at 0% 100%);
+  }
+  .conteiner .servicios .categorias div img {
+    height: 170px;
+  }
+  .conteiner .contacto {
+    top: 23vh;
+  }
+  .conteiner .contacto div {
+    padding: 15px 10px;
+  }
+  .conteiner .contacto div .btn {
+    font-size: 30px;
+  }
+}/*# sourceMappingURL=styles2.css.map */
